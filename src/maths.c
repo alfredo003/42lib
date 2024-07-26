@@ -1,5 +1,17 @@
 #include "../42lib.h"
 
+int add_prime_sum(int num)
+{
+    int sum = 0;
+    while(num > 0)
+    {
+        if(is_prime(num))
+            sum += num;
+        num--;
+    }
+    return(sum);
+}
+
 void fprime(int num)
 {
     int i = 0;
