@@ -6,7 +6,14 @@ int *ft_list_size(t_list *begin_list)
         return (0);
     return (1+ begin_list(begin_list->next));
 }
-
+void ft_foreach_list(t_list *begin_list,void (*f)(void *))
+{
+	while(begin_list)
+	{
+		(*f)(begin_list->data)
+		begin_list = begin_list->next;
+	}
+}
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
 	int swap;
